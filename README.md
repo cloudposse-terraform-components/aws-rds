@@ -252,6 +252,7 @@ Example - I want a new instance `rds-example-new` to be provisioned from a snaps
 | <a name="input_use_dns_delegated"></a> [use\_dns\_delegated](#input\_use\_dns\_delegated) | Use the dns-delegated dns\_zone\_id | `bool` | `false` | no |
 | <a name="input_use_eks_security_group"></a> [use\_eks\_security\_group](#input\_use\_eks\_security\_group) | Use the eks default security group | `bool` | `false` | no |
 | <a name="input_use_private_subnets"></a> [use\_private\_subnets](#input\_use\_private\_subnets) | Use private subnets | `bool` | `true` | no |
+| <a name="input_vpc_component_name"></a> [vpc\_component\_name](#input\_vpc\_component\_name) | VPC component name | `string` | `"vpc"` | no |
 
 ## Outputs
 
