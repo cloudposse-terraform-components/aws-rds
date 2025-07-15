@@ -32,3 +32,10 @@ variable "use_private_subnets" {
   description = "Use private subnets"
   default     = true
 }
+
+variable "vpc_component_name" {
+  type        = string
+  description = "VPC component name"
+  default     = "vpc"
+  nullable    = false
+}
