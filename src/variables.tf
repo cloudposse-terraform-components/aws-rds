@@ -39,3 +39,15 @@ variable "vpc_component_name" {
   default     = "vpc"
   nullable    = false
 }
+
+variable "eks_component_name" {
+  type        = string
+  description = "The name of the EKS component"
+  default     = "dns-delegated"
+}
+
+variable "dns_delegated_component_name" {
+  type        = string
+  description = "The name of the Delegated DNS component"
+  default     = "dns-delegated"
+}
