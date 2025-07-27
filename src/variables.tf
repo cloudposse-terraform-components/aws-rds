@@ -43,7 +43,7 @@ variable "vpc_component_name" {
 variable "eks_component_name" {
   type        = string
   description = "The name of the EKS component"
-  default     = "dns-delegated"
+  default     = "eks"
 }
 
 variable "dns_delegated_component_name" {
