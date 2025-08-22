@@ -10,12 +10,11 @@ tags:
 This component is responsible for provisioning an RDS instance. It seeds relevant database information (hostnames,
 username, password, etc.) into AWS SSM Parameter Store.
 
-## Security Groups Guidance:
+Security Groups Guidance:
 
 By default this component creates a client security group and adds that security group id to the default attached
 security group. Ideally other AWS resources that require RDS access can be granted this client security group.
 Additionally you can grant access via specific CIDR blocks or security group ids.
-
 ## Usage
 
 **Stack Level**: Regional
@@ -101,7 +100,10 @@ Example - I want a new instance `rds-example-new` to be provisioned from a snaps
 1. Post provisioning, remove the `snapshot_idenfier` variable and verify terraform runs clean for the copied instance
 
 <!-- prettier-ignore-start -->
-<!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
+<!-- prettier-ignore-end -->
+
+
+<!-- markdownlint-disable -->
 ## Requirements
 
 | Name | Version |
@@ -256,12 +258,17 @@ Example - I want a new instance `rds-example-new` to be provisioned from a snaps
 | <a name="output_rds_resource_id"></a> [rds\_resource\_id](#output\_rds\_resource\_id) | The RDS Resource ID of this instance. |
 | <a name="output_rds_security_group_id"></a> [rds\_security\_group\_id](#output\_rds\_security\_group\_id) | ID of the Security Group |
 | <a name="output_rds_subnet_group_id"></a> [rds\_subnet\_group\_id](#output\_rds\_subnet\_group\_id) | ID of the created Subnet Group |
-<!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
-<!-- prettier-ignore-end -->
+<!-- markdownlint-restore -->
+
+
 
 ## References
 
-- [cloudposse/terraform-aws-components](https://github.com/cloudposse/terraform-aws-components/tree/main/modules/rds) -
-  Cloud Posse's upstream component
+
+- [cloudposse-terraform-components](https://github.com/orgs/cloudposse-terraform-components/repositories) - Cloud Posse's upstream component
+
+
+
 
 [<img src="https://cloudposse.com/logo-300x69.svg" height="32" align="right"/>](https://cpco.io/homepage?utm_source=github&utm_medium=readme&utm_campaign=cloudposse-terraform-components/aws-rds&utm_content=)
+
