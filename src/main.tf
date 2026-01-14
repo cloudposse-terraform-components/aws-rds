@@ -37,7 +37,7 @@ module "rds_client_sg" {
 
 module "rds_instance" {
   source  = "cloudposse/rds/aws"
-  version = "1.1.3"
+  version = "1.2.0"
 
   allocated_storage                     = var.allocated_storage
   allow_major_version_upgrade           = var.allow_major_version_upgrade
