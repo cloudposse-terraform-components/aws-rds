@@ -10,8 +10,8 @@ locals {
   create_user     = local.enabled && length(var.database_user) == 0
   create_password = local.enabled && length(var.database_password) == 0
 
-  database_user     = local.create_user ? substr(join("", random_pet.database_user.*.id), 0, 16) : var.database_user
-  database_password = local.create_password ? join("", random_password.database_password.*.result) : var.database_password
+  database_user     = local.create_user ? substr(join("", random_pet.database_user[*].id), 0, 16) : var.database_user
+  database_password = local.create_password ? join("", random_password.database_password[*].result) : var.database_password
 
   client_security_group_ids = concat(
     module.this.enabled && var.client_security_group_enabled ? [module.rds_client_sg.id] : [],

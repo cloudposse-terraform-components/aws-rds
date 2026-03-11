@@ -1,8 +1,3 @@
-variable "dns_zone_id" {
-  type        = string
-  default     = ""
-  description = "The ID of the DNS Zone in Route53 where a new DNS record will be created for the DB host name"
-}
 
 variable "host_name" {
   type        = string
@@ -290,12 +285,6 @@ variable "parameter_group_name" {
 variable "option_group_name" {
   type        = string
   description = "Name of the DB option group to associate"
-  default     = ""
-}
-
-variable "kms_key_arn" {
-  type        = string
-  description = "The ARN of the existing KMS key to encrypt storage"
   default     = ""
 }
 
