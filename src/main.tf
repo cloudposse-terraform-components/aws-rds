@@ -37,7 +37,7 @@ module "rds_client_sg" {
 
 module "rds_instance" {
   source  = "cloudposse/rds/aws"
-  version = "1.2.0"
+  version = "1.3.0"
 
   allocated_storage                     = var.allocated_storage
   allow_major_version_upgrade           = var.allow_major_version_upgrade
@@ -59,6 +59,7 @@ module "rds_instance" {
   db_parameter                          = var.db_parameter
   db_parameter_group                    = var.db_parameter_group
   db_subnet_group_name                  = var.db_subnet_group_name
+  blue_green_update_enabled             = var.blue_green_update_enabled
   deletion_protection                   = var.deletion_protection
   dns_zone_id                           = local.dns_zone_id != null ? local.dns_zone_id : ""
   enabled_cloudwatch_logs_exports       = var.enabled_cloudwatch_logs_exports

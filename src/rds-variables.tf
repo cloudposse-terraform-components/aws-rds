@@ -193,6 +193,12 @@ variable "db_subnet_group_name" {
   description = "Name of DB subnet group. DB instance will be created in the VPC associated with the DB subnet group. Specify one of `subnet_ids`, `db_subnet_group_name` or `availability_zone`"
 }
 
+variable "blue_green_update_enabled" {
+  type        = bool
+  description = "Enables low-downtime updates using RDS Blue/Green deployments. Low-downtime updates are only available for DB Instances using MySQL, MariaDB and PostgreSQL, as other engines are not supported by RDS Blue/Green deployments. They cannot be used with DB Instances with replicas."
+  default     = false
+}
+
 variable "auto_minor_version_upgrade" {
   type        = bool
   description = "Allow automated minor version upgrade (e.g. from Postgres 9.5.3 to Postgres 9.5.4)"
