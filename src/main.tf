@@ -129,7 +129,7 @@ resource "random_password" "database_password" {
 
 module "rds_monitoring_role" {
   source  = "cloudposse/iam-role/aws"
-  version = "0.23.0"
+  version = "1.0.0"
 
   count = var.monitoring_interval != "0" ? 1 : 0
 
